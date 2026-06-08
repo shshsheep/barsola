@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FF14 BarSola">
+    <title>FF14 BarSola</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">BAR SOLA</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#story" class="nav-link">#品牌故事</a></li>
+                    <li><a href="#space" class="nav-link">微醺空間</a></li>
+                    <li><a href="#menu" class="nav-link">精選酒單</a></li>
+                    <li><a href="#contact" class="nav-link">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Cover (Ref-Style) -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-brand">BAR SOLA</span>
+                <h1 class="hero-title">
+                    店還是要開<br>
+                    <span class="hero-title-sub">班還是要上</span>
+                </h1>
+                <p class="hero-desc">在無盡前行的城市齒輪中，為自己留一個暫時停頓的溫柔標點。</p>
+                <a href="#reservation" class="hero-btn">RESERVE A TABLE</a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span class="arrow-down"></span>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section" id="story">
+            <div class="section-container">
+                <div class="story-layout">
+                    <div class="story-text-container fade-in">
+                        <span class="section-tag">PHILOSOPHY</span>
+                        <h2 class="section-title">關於 BarSola</h2>
+                        <div class="story-content">
+                            <p class="quote">「店還是要開，班還是要上。」</p>
+                            <p>生活是一場永無休止的日常轉動，晨光熹微時的匆忙，夜幕低垂時的倦意。我們深知生活的不易，也明白那份「即便疲憊，依然得咬牙前進」的堅韌。</p>
+                            <p>因此，我們創立了
+                                <strong>BarSola</strong>。這裡不是喧囂狂放的派對夜店，而是一處私密而溫暖的城市避風港。當你結束了一整天的忙碌，推開這扇門，柔和的暖光、慵懶的爵士樂，以及一杯恰到好處的調酒，都在無聲地對你說：
+                            </p>
+                            <p class="highlight">「辛苦了，今晚在這裡，只做你自己。」</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Space Showcase Section -->
+        <section class="space-section" id="space">
+            <div class="section-container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-tag">THE SPACE</span>
+                    <h2 class="section-title">微醺角落</h2>
+                    <p class="section-subtitle">尋找最適合你今晚心情的專屬角落</p>
+                </div>
+                <div class="space-grid">
+                    <!-- Space Item 1 -->
+                    <div class="space-card fade-in">
+                        <div class="space-img-wrapper">
+                            <img src="images/space-bar.png" alt="BarSola 吧檯區">
+                        </div>
+                        <div class="space-info">
+                            <h3>The Counter | 吧檯區</h3>
+                            <p>看著調酒師以專注的手藝調製專屬你的液體靈魂。適合獨自前來沉澱，或與知己輕聲交談。</p>
+                        </div>
+                    </div>
+                    <!-- Space Item 2 -->
+                    <div class="space-card fade-in">
+                        <div class="space-img-wrapper">
+                            <img src="images/space-lounge.png" alt="BarSola 私人包廂">
+                        </div>
+                        <div class="space-info">
+                            <h3>Private Lounge | 沙發包廂</h3>
+                            <p>沉穩安靜的獨立沙發空間，被溫暖的琥珀色燈光包圍。適合小聚、密談，或享受無人打擾的放鬆時光。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu-section" id="menu">
+            <div class="section-container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-tag">CURATED MENU</span>
+                    <h2 class="section-title">精選酒單</h2>
+                    <p class="section-subtitle">每一款酒，都是寫給今晚日常的一封情書</p>
+                </div>
+                <div class="menu-layout">
+                    <!-- Column 1: Signature Cocktails -->
+                    <div class="menu-category fade-in">
+                        <h3 class="category-title"><i class="fa-solid fa-glass-martini-alt"></i> 特色調酒 / Signatures</h3>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Sola Sunset / 索拉落日</span>
+                                    <span class="item-price">$380</span>
+                                </div>
+                                <p class="item-desc">琴酒、葡萄柚、迷迭香與通寧水。略帶草本苦甜的成熟滋味，像下班後的橘紅夕陽。</p>
+                            </li>
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Overtime Remedy / 加班解藥</span>
+                                    <span class="item-price">$420</span>
+                                </div>
+                                <p class="item-desc">泥煤威士忌、黑巧克力、香草與岩鹽。厚重溫潤的泥煤煙燻，融化在甘甜的尾韻中。</p>
+                            </li>
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Silent Agreement / 默契</span>
+                                    <span class="item-price">$380</span>
+                                </div>
+                                <p class="item-desc">茉莉花茶、白葡萄酒、西洋梨與接骨木花。清雅的花香與酸甜，是不需多言的放鬆。</p>
+                            </li>
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Clock Out Punch / 打卡潘趣</span>
+                                    <span class="item-price">$400</span>
+                                </div>
+                                <p class="item-desc">萊姆酒、熱帶水果、伯爵茶與肉桂。果香濃郁，帶有爽口的茶香，一喝就想打卡下班。</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Classic Spirits & Bites -->
+                    <div class="menu-category fade-in">
+                        <h3 class="category-title"><i class="fa-solid fa-whiskey-glass"></i> 精選威士忌與私房菜 / Spirits & Bites
+                        </h3>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Single Malt Select / 單一麥芽精選</span>
+                                    <span class="item-price">$450+</span>
+                                </div>
+                                <p class="item-desc">每日提供不同產區精選威士忌，請洽調酒師今日推薦酒款。</p>
+                            </li>
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">BarSola Cold Cut Platter / 特色起司冷肉盤</span>
+                                    <span class="item-price">$480</span>
+                                </div>
+                                <p class="item-desc">精選煙燻生火腿、義大利薩拉米、陳年高達起司與手工堅果餅乾，完美的佐酒伴侶。</p>
+                            </li>
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Truffle Shoestring Fries / 松露現炸細薯條</span>
+                                    <span class="item-price">$280</span>
+                                </div>
+                                <p class="item-desc">黃金現炸細薯灑上義大利黑松露鹽與帕瑪森起司碎，酥脆香濃，令人停不下來。</p>
+                            </li>
+                            <li>
+                                <div class="menu-item-header">
+                                    <span class="item-name">Midnight Beef Noodle Soup / 深夜限定牛肉麵</span>
+                                    <span class="item-price">$350</span>
+                                </div>
+                                <p class="item-desc">每日限量的慢火熬煮川味牛肉麵。湯頭濃郁，牛肉軟嫩，溫暖溫潤深夜裡疲憊的胃。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+                <div class="contact-grid">
+                    <div class="contact-info-block fade-in">
+                        <span class="section-tag">FIND US</span>
+                        <h2 class="section-title">聯絡與位置</h2>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-text">
+                                    <h4>門市地址</h4>
+                                    <p>迦樓羅 - 海霧村 - 9區 2號</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="detail-text">
+                                    <h4>營業時間</h4>
+                                    <p>依隊伍招募為主( 22:00 - 02:00 )</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-map-block fade-in">
+                        <!-- Stylized Mock Map showing luxury location -->
+                        <div class="map-placeholder">
+                            <div class="map-overlay">
+                                <div class="map-pin">
+                                    <i class="fa-solid fa-glass-whiskey"></i>
+                                    <span class="pin-pulse"></span>
+                                </div>
+                                <div class="map-label">
+                                    <strong>BAR SOLA</strong>
+                                    <span>迦樓羅 - 海霧村 - 9區 2號</span>
+                                </div>
+                            </div>
+                            <div class="map-canvas">
+                                <!-- Abstract line art representing street maps -->
+                                <svg width="100%" height="100%" viewBox="0 0 400 400"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="100%" height="100%" fill="#efeae4" />
+                                    <!-- Streets -->
+                                    <line x1="50" y1="0" x2="50" y2="400" stroke="#dfd9d0" stroke-width="8" />
+                                    <line x1="200" y1="0" x2="200" y2="400" stroke="#dfd9d0" stroke-width="12" />
+                                    <line x1="320" y1="0" x2="320" y2="400" stroke="#dfd9d0" stroke-width="6" />
+                                    <line x1="0" y1="120" x2="400" y2="120" stroke="#dfd9d0" stroke-width="10" />
+                                    <line x1="0" y1="280" x2="400" y2="280" stroke="#dfd9d0" stroke-width="14" />
+                                    <line x1="0" y1="50" x2="400" y2="350" stroke="#e6e1da" stroke-width="4"
+                                        stroke-dasharray="5,5" />
+                                    <!-- Highlight route -->
+                                    <line x1="200" y1="280" x2="200" y2="220" stroke="#c0aba0" stroke-width="4"
+                                        stroke-dasharray="2,2" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 FF14 -TC BarSola Lounge. All Rights Reserved. </p>
+                <p class="warning-text">未滿十八歲禁止飲酒 ｜ 飲酒過量有害健康 ｜ 酒後不開車安全有保障</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
