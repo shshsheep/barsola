@@ -9,9 +9,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <!-- <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style -->
@@ -30,10 +31,9 @@
             </button>
             <nav class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a href="#story" class="nav-link">#品牌故事</a></li>
-                    <li><a href="#space" class="nav-link">微醺空間</a></li>
-                    <li><a href="#menu" class="nav-link">精選酒單</a></li>
-                    <li><a href="#contact" class="nav-link">聯絡我們</a></li>
+                    <li><a href="#story" class="nav-link">Members</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,17 +44,16 @@
         <section class="hero-section" id="hero">
             <div class="hero-bg-overlay"></div>
             <div class="hero-content">
-                <span class="hero-brand">BAR SOLA</span>
+                <span class="hero-brand"> </span>
                 <h1 class="hero-title">
-                    店還是要開<br>
-                    <span class="hero-title-sub">班還是要上</span>
+                    BAR SOLA<br>
                 </h1>
-                <p class="hero-desc">在無盡前行的城市齒輪中，為自己留一個暫時停頓的溫柔標點。</p>
-                <a href="#reservation" class="hero-btn">RESERVE A TABLE</a>
+                <p class="hero-desc">店還是要開，班還是要上。</p>
             </div>
             <div class="hero-scroll-indicator">
                 <span class="arrow-down"></span>
             </div>
+            <span class="hero-location">迦樓羅 - 海霧村 - 9區2號</span>
         </section>
 
         <!-- Story Section -->
@@ -62,7 +61,7 @@
             <div class="section-container">
                 <div class="story-layout">
                     <div class="story-text-container fade-in">
-                        <span class="section-tag">PHILOSOPHY</span>
+                        <span class="section-tag">Members</span>
                         <h2 class="section-title">關於 BarSola</h2>
                         <div class="story-content">
                             <p class="quote">「店還是要開，班還是要上。」</p>
@@ -78,36 +77,8 @@
         </section>
 
         <!-- Space Showcase Section -->
-        <section class="space-section" id="space">
-            <div class="section-container">
-                <div class="section-header text-center fade-in">
-                    <span class="section-tag">THE SPACE</span>
-                    <h2 class="section-title">微醺角落</h2>
-                    <p class="section-subtitle">尋找最適合你今晚心情的專屬角落</p>
-                </div>
-                <div class="space-grid">
-                    <!-- Space Item 1 -->
-                    <div class="space-card fade-in">
-                        <div class="space-img-wrapper">
-                            <img src="images/space-bar.png" alt="BarSola 吧檯區">
-                        </div>
-                        <div class="space-info">
-                            <h3>The Counter | 吧檯區</h3>
-                            <p>看著調酒師以專注的手藝調製專屬你的液體靈魂。適合獨自前來沉澱，或與知己輕聲交談。</p>
-                        </div>
-                    </div>
-                    <!-- Space Item 2 -->
-                    <div class="space-card fade-in">
-                        <div class="space-img-wrapper">
-                            <img src="images/space-lounge.png" alt="BarSola 私人包廂">
-                        </div>
-                        <div class="space-info">
-                            <h3>Private Lounge | 沙發包廂</h3>
-                            <p>沉穩安靜的獨立沙發空間，被溫暖的琥珀色燈光包圍。適合小聚、密談，或享受無人打擾的放鬆時光。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="space-section">
+
         </section>
 
         <!-- Menu Section -->
@@ -232,22 +203,7 @@
                                 </div>
                             </div>
                             <div class="map-canvas">
-                                <!-- Abstract line art representing street maps -->
-                                <svg width="100%" height="100%" viewBox="0 0 400 400"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="100%" height="100%" fill="#efeae4" />
-                                    <!-- Streets -->
-                                    <line x1="50" y1="0" x2="50" y2="400" stroke="#dfd9d0" stroke-width="8" />
-                                    <line x1="200" y1="0" x2="200" y2="400" stroke="#dfd9d0" stroke-width="12" />
-                                    <line x1="320" y1="0" x2="320" y2="400" stroke="#dfd9d0" stroke-width="6" />
-                                    <line x1="0" y1="120" x2="400" y2="120" stroke="#dfd9d0" stroke-width="10" />
-                                    <line x1="0" y1="280" x2="400" y2="280" stroke="#dfd9d0" stroke-width="14" />
-                                    <line x1="0" y1="50" x2="400" y2="350" stroke="#e6e1da" stroke-width="4"
-                                        stroke-dasharray="5,5" />
-                                    <!-- Highlight route -->
-                                    <line x1="200" y1="280" x2="200" y2="220" stroke="#c0aba0" stroke-width="4"
-                                        stroke-dasharray="2,2" />
-                                </svg>
+                                <img src="images/map.png" alt="BAR SOLA 地圖">
                             </div>
                         </div>
                     </div>
