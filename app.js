@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
-            
+
             // Toggle hamburger icon animation states
             const bars = navToggle.querySelectorAll('.bar');
             if (navToggle.classList.contains('active')) {
@@ -64,40 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // --- Scroll Fade-In Animations ---
-    const fadeElements = document.querySelectorAll('.fade-in');
-    
-    if ('IntersectionObserver' in window) {
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        fadeElements.forEach(el => observer.observe(el));
-    } else {
-        // Fallback for older browsers
-        const checkVisibility = () => {
-            fadeElements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                if (rect.top <= windowHeight * 0.85) {
-                    el.classList.add('visible');
-                }
-            });
-        };
-        window.addEventListener('scroll', checkVisibility);
-        checkVisibility(); // Initial check
-    }
 
     // --- Set Default Date to Tomorrow in Reservation Form ---
     const bookingDateInput = document.getElementById('bookingDate');
@@ -189,6 +155,115 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === modalOverlay) {
                 closeModal();
             }
+        });
+    }
+
+    // --- Member Carousel ---
+    const members = [
+        {
+            name: '吐司 - Toast',
+            image: 'images/Toast34.png',
+            intro: [
+                '看上去高冷的敖龍族女性，在黃金港有著自己的裝潢事務所，因緣際會認識了當初正在裝修店面的店長，之後決定來店裡上班。',
+                '店裡是她的放鬆時刻，她時常斜靠在店內的一隅，帶著悠遠的目光看著店內發生的一切，興致上來時會特別有話聊，也喜歡聽別人的故事。',
+                '「我有酒，你有故事嗎？」——她時常這樣問客人，卻鮮少說自己的事。'
+            ],
+            specialService: '特殊服務項目 : 1對1聊天'
+        },
+        {
+            name: '焗烤喵/千層喵 - 阿喵',
+            image: 'images/meow34.png',
+            intro: [
+                '在艾奧傑亞經營著萬事屋的雙胞胎兄弟檔，因為委託眾多，不一定會每日上班，兩人總是分開工作，所以他們不會一起出現。',
+                '兩人都是溫柔體貼的拉拉菲爾族，據說是出生於烏爾達哈的中產家族，因為嚮往外面的冒險和幫助他人，再學習了各式各樣的能力後，兩人就出發在世界各地旅行接取各式委託。'
+            ],
+            specialService: '特殊服務項目 : 無'
+        }
+    ];
+
+    let currentMemberIndex = 0;
+    const prevBtn = document.querySelector('.arrow-left');
+    const nextBtn = document.querySelector('.arrow-right');
+    const memberPhotoWrapper = document.querySelector('.member-photo-wrapper');
+    const memberInfoContainer = document.querySelector('.member-info-container');
+    const memberName = document.querySelector('.member-name');
+    const memberIntro = document.querySelector('.member-intro');
+
+    if (prevBtn && nextBtn && memberPhotoWrapper && memberInfoContainer && memberName && memberIntro) {
+        const updateMember = (newIndex, direction = 'next') => {
+            const member = members[newIndex];
+            const memberPhoto = memberPhotoWrapper.querySelector('img');
+
+            // Remove previous classes
+            memberPhotoWrapper.classList.remove('enter-right', 'enter-left', 'exit-left', 'exit-right');
+
+            // Add directional exit animation
+            if (direction === 'next') {
+                memberPhotoWrapper.classList.add('exit-left');
+            } else {
+                memberPhotoWrapper.classList.add('exit-right');
+            }
+
+            // Add fade animation to text container
+            memberInfoContainer.classList.remove('text-fade-enter');
+            // Force reflow/repaint
+            void memberInfoContainer.offsetWidth;
+
+            // Wait for exit animation to complete (300ms)
+            setTimeout(() => {
+                if (memberPhoto) {
+                    // Update photo src & alt
+                    memberPhoto.src = member.image;
+                    memberPhoto.alt = member.name;
+                }
+
+                // Update text content
+                memberName.textContent = member.name;
+
+                // Clear and rebuild intro paragraphs
+                memberIntro.innerHTML = '';
+                member.intro.forEach(text => {
+                    const p = document.createElement('p');
+                    p.className = 'intro-text';
+                    p.textContent = text;
+                    memberIntro.appendChild(p);
+                });
+
+                // Add special service
+                const pService = document.createElement('p');
+                pService.className = 'special-service';
+                pService.textContent = member.specialService;
+                memberIntro.appendChild(pService);
+
+                // Swap photo exit -> enter classes
+                memberPhotoWrapper.classList.remove('exit-left', 'exit-right');
+                if (direction === 'next') {
+                    memberPhotoWrapper.classList.add('enter-right');
+                } else {
+                    memberPhotoWrapper.classList.add('enter-left');
+                }
+
+                // Add text fade animation class
+                memberInfoContainer.classList.add('text-fade-enter');
+            }, 300);
+
+            currentMemberIndex = newIndex;
+        };
+
+        prevBtn.addEventListener('click', () => {
+            let nextIndex = currentMemberIndex - 1;
+            if (nextIndex < 0) {
+                nextIndex = members.length - 1;
+            }
+            updateMember(nextIndex, 'prev');
+        });
+
+        nextBtn.addEventListener('click', () => {
+            let nextIndex = currentMemberIndex + 1;
+            if (nextIndex >= members.length) {
+                nextIndex = 0;
+            }
+            updateMember(nextIndex, 'next');
         });
     }
 });
