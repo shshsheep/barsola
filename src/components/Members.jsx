@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 // Import images from assets folder
 import woshoeImg from '../assets/woshoe34.png';
 import ToastImg from '../assets/Toast34.png';
-import GmeowImg from '../assets/meow34.png'; // Fallback for deleted Gmeow34.png
-import CmeowImg from '../assets/meow34.png'; // Fallback for deleted Cmeow34.png
-import blackrabbitImg from '../assets/meow34.png'; // Fallback for deleted blackrabbit34.png
+import GmeowImg from '../assets/Gmeow34.png'; // Fallback for deleted Gmeow34.png
+import CmeowImg from '../assets/Cmeow34.png'; // Fallback for deleted Cmeow34.png
+import blackrabbitImg from '../assets/blackrabbit34.png'; // Fallback for deleted blackrabbit34.png
 import emiImg from '../assets/emi34.png';
 
 const members = [
@@ -134,22 +134,22 @@ const Members = () => {
         <div className="member-showcase fade-in">
           {/* Left: Photo with Nav Arrows */}
           <div className="member-photo-container">
-            <button 
-              className="member-arrow arrow-left" 
+            <button
+              className="member-arrow arrow-left"
               aria-label="Previous member"
               onClick={() => changeMember('prev')}
             >
               <span className="arrow-shape-left"></span>
             </button>
             <div className={`member-photo-wrapper ${photoClass}`}>
-              <img 
-                src={currentMember.image} 
-                alt={currentMember.name} 
-                className="member-photo" 
+              <img
+                src={currentMember.image}
+                alt={currentMember.name}
+                className="member-photo"
               />
             </div>
-            <button 
-              className="member-arrow arrow-right" 
+            <button
+              className="member-arrow arrow-right"
               aria-label="Next member"
               onClick={() => changeMember('next')}
             >
