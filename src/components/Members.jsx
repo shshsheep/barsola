@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 // Import images from assets folder
 import woshoeImg from '../assets/woshoe34.png';
 import ToastImg from '../assets/Toast34.png';
-import GmeowImg from '../assets/Gmeow34.png'; // Fallback for deleted Gmeow34.png
-import CmeowImg from '../assets/Cmeow34.png'; // Fallback for deleted Cmeow34.png
-import blackrabbitImg from '../assets/blackrabbit34.png'; // Fallback for deleted blackrabbit34.png
+import GmeowImg from '../assets/Gmeow34.png'; 
+import CmeowImg from '../assets/Cmeow34.png'; 
+import blackrabbitImg from '../assets/blackrabbit34.png'; 
 import emiImg from '../assets/emi34.png';
 
 const members = [
@@ -18,7 +18,6 @@ const members = [
       '小小的身影穿梭於人群與燈影之間，',
       '編織旅人們安靜的夜。',
       '有時會突然不見，消失在店裡某個誰也找不到的角落。',
-      ' ',
       '「絕對不是去鬼混，絕對不是。」'
     ],
     specialService: '特殊服務項目 : 密談、代客肖像'
@@ -43,7 +42,6 @@ const members = [
       '待在他身邊總是特別令人安心',
       '提到弟弟時，顯得特別溫柔寵溺。',
       '命運總是相似，卻又截然不同，如同他們兄弟檔。',
-      ' ',
       '「希望旅途之餘，在此駐足能讓您感到放鬆，很高興認識您。」–他擦拭著空酒杯，溫柔微笑著說道。'
     ],
     specialService: '特殊服務項目 : 密談'
@@ -56,7 +54,6 @@ const members = [
       '待在他身邊總是令人特別暖心',
       '提到哥哥時，會少見得慌張害羞。',
       '命運總是相似，卻又截然不同，如同他們兄弟檔。',
-      ' ',
       '「很高興認識您，請您儘管在店裡休息放鬆，休息充分再出發吧。」–他搖晃著調酒器，開朗燦笑著說道。'
     ],
     specialService: '特殊服務項目 : 密談'
