@@ -182,7 +182,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('images/barsola1.png');
+    background-image: url('./assets/barsola1.png');
     background-size: cover;
     background-position: center;
     overflow: hidden;
