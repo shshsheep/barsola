@@ -1,16 +1,20 @@
-# React + Vite
+# BAR SOLA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BAR SOLA 是一個高級酒吧的官方網站，位於迦樓羅 - 海霧村 - 9區 2號。
 
-Currently, two official plugins are available:
+## 簡介
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+本網站展示BAR SOLA的品牌形象、菜單、成員介紹及聯繫資訊。提供優雅的使用者介面，讓客人了解我們的服務。
 
-## React Compiler
+## 技術棧
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** - UI框架
+- **Vite** - 快速構建工具
+- **Font Awesome** - 圖標庫
+- **CSS3** - 樣式設計
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 聯繫我們
+
+- **地址**: 迦樓羅 - 海霧村 - 9區 2號
+- **營業時間**: 22:00 - 02:00

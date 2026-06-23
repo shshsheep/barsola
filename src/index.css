@@ -737,6 +737,12 @@ img {
     font-size: 1.3rem;
     color: var(--accent-dark);
     margin-top: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .detail-text h4 {
