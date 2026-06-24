@@ -7,6 +7,7 @@ import GmeowImg from '../assets/Gmeow34.png';
 import CmeowImg from '../assets/Cmeow34.png'; 
 import blackrabbitImg from '../assets/blackrabbit34.png'; 
 import emiImg from '../assets/emi34.png';
+import lobsterImg from '../assets/lobster34.png';
 
 const members = [
   {
@@ -83,6 +84,19 @@ const members = [
       '「大貓咪保佑。」— 她在心裡默默祈禱'
     ],
     specialService: '特殊服務項目 : 個人攝影'
+  },
+  {
+    name: '鋼鐵龍蝦 - 龍蝦',
+    image: lobsterImg,
+    intro: [
+      '對於客人的身份與神色，他從不主動追問，',
+      '也不作任何評判。',
+      '他只是靜靜地站在一旁，用那雙深邃的眼眸，',
+      '默默地將每一個旅人的故事收入心底。',
+      '「歡迎歸來，漂泊的靈魂。',
+      '\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0今晚有什麼故事，想與我分享？」'
+    ],
+    specialService: '特殊服務項目 : 密談'
   }
 ];
 
