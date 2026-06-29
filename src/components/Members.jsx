@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 // Import images from assets folder
 import woshoeImg from '../assets/woshoe34.png';
 import ToastImg from '../assets/Toast34.png';
-import GmeowImg from '../assets/Gmeow34.png'; 
-import CmeowImg from '../assets/Cmeow34.png'; 
-import blackrabbitImg from '../assets/blackrabbit34.png'; 
+import GmeowImg from '../assets/Gmeow34.png';
+import CmeowImg from '../assets/Cmeow34.png';
+import blackrabbitImg from '../assets/blackrabbit34.png';
 import emiImg from '../assets/emi34.png';
 import lobsterImg from '../assets/lobster34.png';
+import YYImg from '../assets/YY34.png';
 
 const members = [
   {
@@ -95,6 +96,19 @@ const members = [
       '默默地將每一個旅人的故事收入心底。',
       '「歡迎歸來，漂泊的靈魂。',
       '\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0今晚有什麼故事，想與我分享？」'
+    ],
+    specialService: '特殊服務項目 : 密談'
+  },
+  {
+    name: '櫻空玥 - 玥玥',
+    image: YYImg,
+    intro: [
+      '寡言害羞是她給人的第一印象，',
+      '但熟客們都明白，她只是不擅言詞，其實很體貼溫暖。',
+      '在熙攘的人群穿梭，優雅俐落，',
+      '靦腆似細水，靈魂如焰火。',
+      ' ',
+      '「歡迎光臨《Bar Sola》。」– 她有些羞澀的招呼著。'
     ],
     specialService: '特殊服務項目 : 密談'
   }

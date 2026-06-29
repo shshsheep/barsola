@@ -4,25 +4,25 @@ const Menu = () => {
   const signatures = [
     {
       name: 'Blaze / 熾砂',
-      price: '$5,000',
+      price: '$9,500',
       desc: '帶有濃醇玫瑰香氣，能令人感覺到活力的烈酒。',
       subDesc: '—如夜色中一瞬燃起的光芒。(剛力)'
     },
     {
       name: 'Dawn / 曦光',
-      price: '$4,500',
+      price: '$9,000',
       desc: '口感溫順好入喉，如晨露清甜甘醇的白葡萄酒。',
       subDesc: '—世界甦醒前的第一道呼吸。(意力)'
     },
     {
       name: 'Silent / 星幽',
-      price: '$4,000',
+      price: '$8,000',
       desc: '以烈酒為基底搭配特製甜酒，營造星空感的特調。',
       subDesc: '—在寂靜裡緩慢流動的宇宙。(智力)'
     },
     {
       name: 'Wisp / 迷夢',
-      price: '$5,000',
+      price: '$9,500',
       desc: '用精選葡萄釀製，窖藏多年，香氣濃烈迷人的紅葡萄酒。',
       subDesc: '—記憶邊緣的一縷殘影。(巧力)'
     }
