@@ -55,6 +55,22 @@ const Menu = () => {
     }
   ];
 
+  const specials = [
+    {
+      name: '密談 / Conversation',
+      price: '詳細價格請詢問現場工作人員',
+      desc: '在靜謐私享的氛圍中，由店內成員傾聽您的故事，分享溫暖的心靈絮語。',
+      subDesc: '— 交換心聲與秘密的專屬時光。'
+    },
+    {
+      name: '個人攝影 / Photography',
+      price: '詳細價格請詢問現場工作人員',
+      desc: '由指定成員為您進行個人拍攝，捕捉並定格您在 Bar Sola 的優雅與璀璨瞬間。',
+      subDesc: '— 留存永恆的精緻光影記憶。'
+    }
+
+  ];
+
   return (
     <section className="menu-section" id="menu">
       <div className="section-container">
@@ -99,6 +115,25 @@ const Menu = () => {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Special Menu Section */}
+        <div className="menu-layout-special fade-in">
+          <h3 className="category-title">
+            <i className="fa-solid fa-wand-magic-sparkles"></i> 特殊服務 / Special
+          </h3>
+          <ul className="menu-list-special">
+            {specials.map((item, index) => (
+              <li key={index} className="menu-item-special">
+                <div className="menu-item-header">
+                  <span className="item-name">{item.name}</span>
+                  <span className="item-price special-price">{item.price}</span>
+                </div>
+                <p className="item-desc">{item.desc}</p>
+                {item.subDesc && <p className="item-desc">{item.subDesc}</p>}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

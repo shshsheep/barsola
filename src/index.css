@@ -569,6 +569,35 @@ img {
     line-height: 1.6;
 }
 
+.menu-layout-special {
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.menu-list-special {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.menu-item-special {
+    display: flex;
+    flex-direction: column;
+}
+
+.special-price {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--accent-dark);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background-color: rgba(196, 164, 147, 0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
 /* Reservation Section */
 .reservation-section {
     background-color: var(--bg-secondary);
@@ -1127,6 +1156,10 @@ img {
         gap: 3rem;
     }
 
+    .menu-list-special {
+        gap: 3rem;
+    }
+
     .reservation-box {
         grid-template-columns: 1fr;
     }
@@ -1196,6 +1229,22 @@ img {
     .menu-layout {
         grid-template-columns: 1fr;
         gap: 4rem;
+    }
+
+    .menu-layout-special {
+        margin-top: 4rem;
+        padding-top: 3rem;
+    }
+
+    .menu-list-special {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .menu-item-special .menu-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
     .contact-grid {

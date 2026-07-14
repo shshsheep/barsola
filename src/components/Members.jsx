@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 
 // Import images from assets folder
-import woshoeImg from '../assets/woshoe34.png';
-import ToastImg from '../assets/Toast34.png';
+import woshoeImg from '../assets/wo34.png';
+import ToastImg from '../assets/toast34.png';
 import GmeowImg from '../assets/Gmeow34.png';
 import CmeowImg from '../assets/Cmeow34.png';
 import blackrabbitImg from '../assets/blackrabbit34.png';
 import emiImg from '../assets/emi34.png';
 import lobsterImg from '../assets/lobster34.png';
 import YYImg from '../assets/YY34.png';
+import ashImg from '../assets/ash34.png';
+import greenImg from '../assets/green34.png';
+import satoriImg from '../assets/satori34.png';
+import snowImg from '../assets/snow34.png';
+
 
 const members = [
   {
     name: 'Woshoe - 窩窩',
     image: woshoeImg,
     intro: [
-      '人生是一場豪賭，開店也是。',
+      '開店是一場豪賭，人生也是。',
       '喜歡聽故事，也擅長替故事保守秘密。',
       '小小的身影穿梭於人群與燈影之間，',
       '編織旅人們安靜的夜。',
@@ -40,8 +45,8 @@ const members = [
     name: '焗烤喵 - 阿喵',
     image: GmeowImg,
     intro: [
-      '溫柔沉穩的拉拉菲爾族，親切隨和。',
-      '待在他身邊總是特別令人安心',
+      '溫柔沉穩的拉拉菲爾族，親切隨和，',
+      '待在他身邊總是特別令人安心。',
       '提到弟弟時，顯得特別溫柔寵溺。',
       '命運總是相似，卻又截然不同，如同他們兄弟檔。',
       '「希望旅途之餘，在此駐足能讓您感到放鬆，很高興認識您。」–他擦拭著空酒杯，溫柔微笑著說道。'
@@ -52,8 +57,8 @@ const members = [
     name: '千層喵 - 阿喵',
     image: CmeowImg,
     intro: [
-      '開朗陽光的拉拉菲爾族，親切隨和。',
-      '待在他身邊總是令人特別暖心',
+      '開朗陽光的拉拉菲爾族，親切隨和，',
+      '待在他身邊總是令人特別暖心。',
       '提到哥哥時，會少見得慌張害羞。',
       '命運總是相似，卻又截然不同，如同他們兄弟檔。',
       '「很高興認識您，請您儘管在店裡休息放鬆，休息充分再出發吧。」–他搖晃著調酒器，開朗燦笑著說道。'
@@ -69,7 +74,7 @@ const members = [
       '看似難以接近，其實很重視每一位願意靠近的人。',
       '也會記得客人的小習慣。',
       ' ',
-      '「來，請說吧。聆聽您的故事是我的職責。」'
+      '「來，請說吧，聆聽您的故事是我的職責。」'
     ],
     specialService: '特殊服務項目 : 無'
   },
@@ -111,7 +116,54 @@ const members = [
       '「歡迎光臨《Bar Sola》。」– 她有些羞澀的招呼著。'
     ],
     specialService: '特殊服務項目 : 密談'
-  }
+  },
+  {
+    name: '格林',
+    image: greenImg,
+    intro: [
+      '溫柔內斂的敖龍族少女，將心事藏於筆尖。',
+      '喜愛寫作與收集童話書，記錄旅途中的相遇。',
+      '她害怕孤單，也藏著不願訴說的過去。',
+      ' ',
+      '「若您願意留下片刻，能否與我分享您的故事？」',
+      '\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0– 她輕撫書頁，溫柔微笑著說道。'
+    ],
+    specialService: '特殊服務項目 : 密談'
+  },
+  {
+    name: '時達艾詡 - 艾詡',
+    image: ashImg,
+    intro: [
+      '初見時，她總給人一種難以親近的印象。',
+      '一絲不苟的禮儀，給人保持了一種距離感。',
+      '多些時間的相處，便會發現那份拘謹下是對每一次相遇的真誠與尊重。',
+      '她不追求成為最耀眼的火焰。',
+      '只願如她名字中的餘燼一般，在夜晚散去之後，仍為您留下些許溫暖。'
+    ],
+    specialService: '特殊服務項目 : 密談'
+  },
+  {
+    name: 'Satori ',
+    image: satoriImg,
+    intro: [
+      '-',
+      '-',
+      '-',
+      '-'
+    ],
+    specialService: '特殊服務項目 : 密談'
+  },
+  {
+    name: '緋寒櫻綻 - 緋寒',
+    image: snowImg,
+    intro: [
+      '-',
+      '-',
+      '-',
+      '-'
+    ],
+    specialService: '特殊服務項目 : 密談'
+  },
 ];
 
 const Members = () => {
