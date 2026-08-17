@@ -55,7 +55,7 @@ img {
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 8rem 2rem;
+    padding: 10rem 2rem;
 }
 
 .text-center {
@@ -316,7 +316,226 @@ img {
 
 /* Members Section */
 .members-section {
-    background-color: var(--bg-primary);
+    background-color: #000000;
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(255, 235, 180, 0.08), transparent 60%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    position: relative;
+    overflow: hidden;
+}
+
+.members-section .section-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animated Light Backdrop */
+.members-light-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.light-glow {
+    position: absolute;
+    top: -35%;
+    left: -35%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 25% 25%, rgba(255, 245, 210, 0.35) 0%, rgba(212, 175, 55, 0.12) 40%, transparent 80%);
+    filter: blur(50px);
+    mix-blend-mode: screen;
+    animation: glow-pulse 10s ease-in-out infinite alternate;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.light-rays {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(-35deg,
+            transparent,
+            transparent 45px,
+            rgba(255, 245, 210, 0.12) 65px,
+            rgba(255, 245, 210, 0.28) 85px,
+            rgba(255, 245, 210, 0.12) 105px,
+            transparent 125px,
+            transparent 200px);
+    -webkit-mask-image: radial-gradient(circle at 15% 15%, black 20%, rgba(0, 0, 0, 0.45) 50%, transparent 75%);
+    mask-image: radial-gradient(circle at 15% 15%, black 20%, rgba(0, 0, 0, 0.45) 50%, transparent 75%);
+    mix-blend-mode: screen;
+    animation: ray-shimmer 15s ease-in-out infinite alternate;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.light-dapple {
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background:
+        radial-gradient(circle at 20% 20%, transparent 20%, rgba(0, 0, 0, 0.82) 45%, transparent 65%),
+        radial-gradient(circle at 10% 40%, transparent 15%, rgba(0, 0, 0, 0.85) 40%, transparent 60%),
+        radial-gradient(circle at 40% 10%, transparent 20%, rgba(0, 0, 0, 0.85) 45%, transparent 70%);
+    filter: blur(28px);
+    mix-blend-mode: multiply;
+    animation: dapple-drift 22s ease-in-out infinite alternate;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.light-particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(212, 180, 131, 0.95) 0%, rgba(212, 180, 131, 0) 70%);
+    border-radius: 50%;
+    filter: blur(1.5px);
+    opacity: 0;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+.light-particle.p1 {
+    width: 7px;
+    height: 7px;
+    top: 75%;
+    left: 20%;
+    animation: float-particle-1 12s infinite linear;
+}
+
+.light-particle.p2 {
+    width: 10px;
+    height: 10px;
+    top: 65%;
+    left: 50%;
+    animation: float-particle-2 16s infinite linear;
+}
+
+.light-particle.p3 {
+    width: 6px;
+    height: 6px;
+    top: 80%;
+    left: 80%;
+    animation: float-particle-3 14s infinite linear;
+}
+
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1.1;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes ray-shimmer {
+    0% {
+        opacity: 0.75;
+        transform: translate(-15px, -15px);
+    }
+
+    100% {
+        opacity: 1.1;
+        transform: translate(15px, 15px);
+    }
+}
+
+@keyframes dapple-drift {
+    0% {
+        transform: scale(1) rotate(0deg) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.04) rotate(1.5deg) translate(-8px, 8px);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg) translate(0, 0);
+    }
+}
+
+@keyframes float-particle-1 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.55;
+    }
+
+    90% {
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: translateY(-280px) translateX(35px);
+        opacity: 0;
+    }
+}
+
+@keyframes float-particle-2 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.75;
+    }
+
+    85% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateY(-380px) translateX(-45px);
+        opacity: 0;
+    }
+}
+
+@keyframes float-particle-3 {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.45;
+    }
+
+    80% {
+        opacity: 0.45;
+    }
+
+    100% {
+        transform: translateY(-220px) translateX(25px);
+        opacity: 0;
+    }
+}
+
+.members-section .section-tag {
+    color: #c5a880;
+    text-shadow: 0 0 12px rgba(197, 168, 128, 0.45);
+    position: relative;
+    z-index: 10;
 }
 
 .member-showcase {
@@ -328,6 +547,8 @@ img {
     height: 500px;
     margin: 0 auto;
     padding: 2rem 0;
+    position: relative;
+    z-index: 2;
 }
 
 .member-photo-container {
@@ -345,8 +566,13 @@ img {
     aspect-ratio: 3 / 4;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 10px 15px 35px black;
-    background-color: var(--bg-secondary);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
+    background-color: #121212;
+    z-index: 5;
+    position: relative;
+    border: 1px solid rgba(197, 168, 128, 0.15);
+    transform: translateZ(0);
+    will-change: transform, opacity;
 }
 
 .member-photo {
@@ -367,11 +593,12 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
 }
 
 .member-arrow:hover {
-    opacity: 0.7;
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
 }
 
 .arrow-left {
@@ -386,18 +613,27 @@ img {
     display: block;
     width: 12px;
     height: 12px;
-    border-bottom: 2px solid #8c827a;
-    border-left: 2px solid #8c827a;
+    border-bottom: 2px solid #c5a880;
+    border-left: 2px solid #c5a880;
     transform: rotate(45deg);
+    filter: drop-shadow(0 0 5px rgba(197, 168, 128, 0.5));
+    transition: border-color 0.3s;
 }
 
 .arrow-shape-right {
     display: block;
     width: 12px;
     height: 12px;
-    border-top: 2px solid #8c827a;
-    border-right: 2px solid #8c827a;
+    border-top: 2px solid #c5a880;
+    border-right: 2px solid #c5a880;
     transform: rotate(45deg);
+    filter: drop-shadow(0 0 5px rgba(197, 168, 128, 0.5));
+    transition: border-color 0.3s;
+}
+
+.member-arrow:hover .arrow-shape-left,
+.member-arrow:hover .arrow-shape-right {
+    border-color: #f7e6d4;
 }
 
 .member-info-container {
@@ -407,27 +643,30 @@ img {
     height: 100%;
     padding: 0.5rem 0;
     overflow: hidden;
+    position: relative;
+    z-index: 5;
 }
 
 .member-name {
     font-size: 2rem;
     font-weight: 500;
-    color: var(--text-primary);
+    color: #c5a880;
     margin-left: 0.5rem;
     letter-spacing: 0.05em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .member-separator {
     width: 100%;
-    height: 2px;
-    background-color: #000000;
+    height: 1px;
+    background: linear-gradient(to right, rgba(197, 168, 128, 1), rgba(197, 168, 128, 0.15));
     margin-bottom: 1.5rem;
 }
 
 .member-intro {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--text-muted);
+    color: #d1c7bd;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -435,14 +674,16 @@ img {
 
 .member-intro .intro-text {
     margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .member-intro .special-service {
     font-size: 1rem;
-    color: var(--text-primary);
+    color: #c5a880;
     font-weight: 500;
     margin-top: auto;
     padding-top: 1.5rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Space Section */

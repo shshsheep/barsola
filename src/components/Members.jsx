@@ -293,6 +293,15 @@ const Members = () => {
 
   return (
     <section className="members-section" id="story">
+      {/* Animated Light Backdrop (behind content) */}
+      <div className="members-light-bg">
+        <div className="light-glow"></div>
+        <div className="light-rays"></div>
+        <div className="light-dapple"></div>
+        <div className="light-particle p1"></div>
+        <div className="light-particle p2"></div>
+        <div className="light-particle p3"></div>
+      </div>
       <div className="section-container">
         <div className="section-header text-center fade-in">
           <span className="section-tag">Members</span>

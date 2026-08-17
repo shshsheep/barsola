@@ -12,11 +12,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ===== Preloader ===== */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #c5a880;
+            letter-spacing: 0.12em;
+            text-shadow: 0 0 30px rgba(197, 168, 128, 0.5);
+            animation: preloader-glow 2s ease-in-out infinite alternate;
+        }
+
+        .preloader-sub {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: rgba(197, 168, 128, 0.5);
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            margin-top: -1.5rem;
+        }
+
+        .preloader-ring {
+            width: 48px;
+            height: 48px;
+            border: 2px solid rgba(197, 168, 128, 0.15);
+            border-top-color: #c5a880;
+            border-radius: 50%;
+            animation: preloader-spin 1.1s linear infinite;
+        }
+
+        @keyframes preloader-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes preloader-glow {
+            from { text-shadow: 0 0 20px rgba(197, 168, 128, 0.3); }
+            to   { text-shadow: 0 0 45px rgba(197, 168, 128, 0.75); }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Preloader (visible before React mounts) -->
+    <div id="preloader">
+        <div class="preloader-logo">Bar Sola</div>
+        <div class="preloader-sub">Welcome</div>
+        <div class="preloader-ring"></div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+        // Hide preloader once everything is loaded
+        window.addEventListener('load', function () {
+            var preloader = document.getElementById('preloader');
+            if (preloader) {
+                // Small extra delay for a smoother feel
+                setTimeout(function () {
+                    preloader.classList.add('hidden');
+                    setTimeout(function () {
+                        preloader.remove();
+                    }, 850);
+                }, 400);
+            }
+        });
+    </script>
 </body>
 
 </html>
