@@ -250,9 +250,19 @@ const members = [
 const Members = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayIndex, setDisplayIndex] = useState(0);
-  const [photoClass, setPhotoClass] = useState('');
-  const [textClass, setTextClass] = useState('text-fade-enter');
+  const [fadeState, setFadeState] = useState('in');
+  const [photoTransition, setPhotoTransition] = useState('slide-next-in');
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    members.forEach((member) => {
+      const img = new Image();
+      img.src = member.image;
+      if (typeof img.decode === 'function') {
+        img.decode().catch(() => undefined);
+      }
+    });
+  }, []);
 
   const changeMember = useCallback((direction) => {
     if (isTransitioning) return;
@@ -265,20 +275,20 @@ const Members = () => {
       nextIndex = currentIndex + 1 >= members.length ? 0 : currentIndex + 1;
     }
 
-    // Set exit animation classes
-    const exitClass = direction === 'prev' ? 'exit-right' : 'exit-left';
-    setPhotoClass(exitClass);
-    setTextClass('');
+    const nextTransition = direction === 'next' ? 'slide-next-out' : 'slide-prev-out';
+    setPhotoTransition(nextTransition);
+    setFadeState('out');
 
-    // Wait for the exit animation (300ms) before updating the contents and triggering entry animations
     setTimeout(() => {
       setDisplayIndex(nextIndex);
-      const enterClass = direction === 'prev' ? 'enter-left' : 'enter-right';
-      setPhotoClass(enterClass);
-      setTextClass('text-fade-enter');
       setCurrentIndex(nextIndex);
-      setIsTransitioning(false);
-    }, 300);
+      setPhotoTransition(direction === 'next' ? 'slide-next-in' : 'slide-prev-in');
+      setFadeState('in');
+
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 550);
+    }, 550);
   }, [currentIndex, isTransitioning]);
 
   useEffect(() => {
@@ -316,11 +326,13 @@ const Members = () => {
             >
               <span className="arrow-shape-left"></span>
             </button>
-            <div className={`member-photo-wrapper ${photoClass}`}>
+            <div className={`member-photo-wrapper ${photoTransition}`}>
               <img
                 src={currentMember.image}
                 alt={currentMember.name}
                 className="member-photo"
+                decoding="async"
+                loading="eager"
               />
             </div>
             <button
@@ -333,7 +345,7 @@ const Members = () => {
           </div>
 
           {/* Right: Info */}
-          <div className={`member-info-container ${textClass}`}>
+          <div className={`member-info-container ${fadeState === 'in' ? 'fade-visible' : 'fade-hidden'}`}>
             <h2 className="member-name">{currentMember.name}</h2>
             <div className="member-separator"></div>
             <div className="member-intro">
