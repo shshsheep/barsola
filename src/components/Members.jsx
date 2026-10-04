@@ -1,25 +1,25 @@
 import { useState, useEffect, useCallback } from 'react';
 
 // Import images from assets folder
-import woshoeImg from '../assets/wo34.png';
-import ToastImg from '../assets/toast34.png';
-import GmeowImg from '../assets/Gmeow34.png';
-import CmeowImg from '../assets/Cmeow34.png';
-import blackrabbitImg from '../assets/blackrabbit34.png';
-import emiImg from '../assets/emi34.png';
-import lobsterImg from '../assets/lobster34.png';
-import YYImg from '../assets/YY34.png';
-import ashImg from '../assets/ash34.png';
-import greenImg from '../assets/green34.png';
-import satoriImg from '../assets/satori34.png';
-import snowImg from '../assets/snow34.png';
-import nickImg from '../assets/nick34.png';
-import D7Img from '../assets/D734.png';
-import purpleImg from '../assets/purple34.png';
-import seedImg from '../assets/seed34.png';
-import catImg from '../assets/cat34.png';
-import XuImg from '../assets/Xu34.png';
-import birdImg from '../assets/bird34.png';
+import woshoeImg from '../assets/wo34.webp';
+import ToastImg from '../assets/toast34.webp';
+import GmeowImg from '../assets/Gmeow34.webp';
+import CmeowImg from '../assets/Cmeow34.webp';
+import blackrabbitImg from '../assets/blackrabbit34.webp';
+import emiImg from '../assets/emi34.webp';
+//import lobsterImg from '../assets/lobster34.png';
+import YYImg from '../assets/YY34.webp';
+import ashImg from '../assets/ash34.webp';
+import greenImg from '../assets/green34.webp';
+import satoriImg from '../assets/satori34.webp';
+import snowImg from '../assets/snow34.webp';
+//import nickImg from '../assets/nick34.png';
+import D7Img from '../assets/D734.webp';
+//import purpleImg from '../assets/purple34.png';
+//import seedImg from '../assets/seed34.png';
+import catImg from '../assets/cat34.webp';
+import XuImg from '../assets/Xu34.webp';
+import birdImg from '../assets/bird34.webp';
 
 
 

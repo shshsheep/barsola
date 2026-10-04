@@ -1,5 +1,5 @@
 import React from 'react';
-import mapImg from '../assets/map.png';
+import mapImg from '../assets/map.webp';
 
 const Contact = () => {
   return (
@@ -30,7 +30,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="contact-map-block fade-in">
             {/* Stylized Mock Map showing luxury location */}
             <div className="map-placeholder">

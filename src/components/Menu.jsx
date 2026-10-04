@@ -70,7 +70,7 @@ const Menu = () => {
     },
     {
       name: '簽繪拍立得 / Keepsake',
-      price: '$250,000 · 1 Photo · 1 Person',
+      price: '$500,000 · 1 Photo · 1 Person',
       desc: '由指定成員為您親筆簽繪，並拍攝專屬拍立得，留下一份只屬於今夜的珍貴紀念。',
       subDesc: '— 將今夜的相遇，珍藏於掌心之間。'
     },
